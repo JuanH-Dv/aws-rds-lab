@@ -7,15 +7,11 @@
 
 This repository documents a hands-on lab where I provisioned a Microsoft SQL Server instance on Amazon RDS within a preconfigured AWS VPC environment.
 
----
-
-## 🎯 Objective
+## Objective
 Deploy and validate a Microsoft SQL Server database using Amazon RDS inside a pre-provisioned VPC.  
 The lab focuses on networking, security, high availability, and validation using SQL Server Management Studio (SSMS).
 
----
-
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 **AWS Components Used**
 - **VPC (Lab-VPC):** Existing VPC with subnets, route tables, and Internet Gateway.
@@ -24,8 +20,7 @@ The lab focuses on networking, security, high availability, and validation using
 - **Amazon RDS:** Microsoft SQL Server Express instance (Free Tier).
 
 
-
-## 💡 Hypothetical Use Case
+## Hypothetical Use Case
 
 A **retail startup** needs a managed relational database to store:
 - Customer information
@@ -40,9 +35,7 @@ Instead of managing SQL Server on EC2, the company uses **Amazon RDS** to benefi
 
 This lab simulates the **initial database setup** for such an environment.
 
----
-
-## ⚙️ Implementation Summary
+## Implementation Summary
 
 1. Created a **Security Group** allowing inbound TCP traffic on port 1433.
 2. Created an **RDS Subnet Group** with two subnets in separate AZs.
@@ -51,9 +44,7 @@ This lab simulates the **initial database setup** for such an environment.
    - Public access: Enabled
    - Attached Security Group and Subnet Group
 
----
-
-## 🔍 Validation & Testing with SSMS
+## Validation & Testing with SSMS
 
 ### Step 1: Retrieve the RDS Endpoint
 - AWS Console → RDS → Databases → lab-database
@@ -132,14 +123,11 @@ These queries verified that:
 - Filtering by `CustomerID` worked as expected.
 - Update operations correctly modified the targeted row, confirming end-to-end CRUD capabilities against the managed database.
 
----
 
 ## Key Learnings
 
 - Gained practical experience configuring **Amazon RDS for SQL Server** within an existing VPC, including subnet groups and security groups.
 - Practiced balancing **accessibility vs. security** by exposing the database publicly for lab purposes while understanding network and firewall implications.
-
----
 
 ## Technologies Used
 
@@ -148,3 +136,11 @@ These queries verified that:
 - **Amazon VPC** (Virtual Private Cloud)
 - **AWS Security Groups**
 - **SQL Server Management Studio (SSMS)**
+
+## Acknowledgments
+
+Special thanks to **Workshop M&O** for providing comprehensive hands-on AWS training materials and guided laboratory environment.
+
+---
+
+*This project is for educational purposes.*
